@@ -97,87 +97,70 @@
         const graphs = {
             'combined': {
                 name: 'All',
-                description: 'All cases combined with frequency analysis',
                 file: 'graphs/network_graph_combined.html'
             },
             'case1': {
                 name: 'Case 1',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case1.html'
             },
             'case2': {
                 name: 'Case 2',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case2.html'
             },
             'case3': {
                 name: 'Case 3',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case3.html'
             },
             'case4': {
                 name: 'Case 4',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case4.html'
             },
             'case5': {
                 name: 'Case 5',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case5.html'
             },
             'case6': {
                 name: 'Case 6',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case6.html'
             },
             'case7': {
                 name: 'Case 7',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case7.html'
             },
             'case8': {
                 name: 'Case 8',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case8.html'
             },
             'case9': {
                 name: 'Case 9',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case9.html'
             },
             'case10': {
                 name: 'Case 10',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case10.html'
             },
             'case11': {
                 name: 'Case 11',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case11.html'
             },
             'case12': {
                 name: 'Case 12',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case12.html'
             },
             'case13': {
                 name: 'Case 13',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case13.html'
             },
             'case14': {
                 name: 'Case 14',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case14.html'
             },
             'case15': {
                 name: 'Case 15',
-                description: 'Individual case analysis',
                 file: 'graphs/graph_case_case15.html'
             },
             'case16': {
                 name: 'Case 16',
-                description: 'Individual case analysis (no valid codes after filtering)',
                 file: 'graphs/graph_case_case16.html'
             }
         };
@@ -259,10 +242,6 @@
                 
                 // Create iframe to display the graph
                 display.innerHTML = `
-                    <div class="mb-4 p-4 bg-blue-50 rounded-lg">
-                        <h3 class="font-semibold text-blue-800">${config.name}</h3>
-                        <p class="text-blue-700 text-sm">${config.description}</p>
-                    </div>
                     <iframe src="${config.file}" class="w-full h-96 border-0 rounded-lg" style="min-height: 600px;"></iframe>
                 `;
 

@@ -118,12 +118,10 @@
         const graphConfigs = {
             'combined': {
                 name: 'Combined Analysis',
-                description: 'All cases combined with frequency analysis',
                 content: null // Will be loaded dynamically
             },
             'sample': {
                 name: 'Sample Data',
-                description: 'Sample network for comparison',
                 content: null // Will be loaded dynamically
             }
         };
@@ -134,7 +132,6 @@
             const caseId = i.toString();
             individualCases[`case_${caseId}`] = {
                 name: `Case ${caseId}`,
-                description: 'Individual case analysis',
                 content: null // Will be loaded dynamically
             };
         }
@@ -223,10 +220,6 @@
                     ${controlsPanel ? controlsPanel.outerHTML : ''}
                     <div class="graph-container active">
                         ${svgElement.outerHTML}
-                    </div>
-                    <div class="mt-4 p-4 bg-blue-50 rounded-lg">
-                        <h3 class="font-semibold text-blue-800">${config.name}</h3>
-                        <p class="text-blue-700 text-sm">${config.description}</p>
                     </div>
                 `;
 
