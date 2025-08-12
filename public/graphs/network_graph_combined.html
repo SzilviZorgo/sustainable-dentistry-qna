@@ -57,27 +57,11 @@
         <div class="controls-panel w-full max-w-xl mx-auto mb-6">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Filter Edges by Type:</h2>
             <div class="text-sm text-gray-600 mb-4">
-                <p><strong>Edge Types Found:</strong> Affect, Manifest, Analogue</p>
+                <p><strong>Edge Types Found:</strong> Analogue, Affect, Manifest</p>
             </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
-                <label class="checkbox-label">
-                    <input type="checkbox" id="filter-affect" data-color="red" data-style="dashed" data-type="Affect" checked>
-                    <span class="text-red-600 font-medium">Affect (Red Dashed)</span>
-                    <svg width="40" height="2" class="ml-2"><line x1="0" y1="1" x2="40" y2="1" stroke="red" stroke-width="2" stroke-dasharray="5,5"/></svg>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" id="filter-manifest" data-color="green" data-style="solid" data-type="Manifest" checked>
-                    <span class="text-green-600 font-medium">Manifest (Green Solid)</span>
-                    <svg width="40" height="2" class="ml-2"><line x1="0" y1="1" x2="40" y2="1" stroke="green" stroke-width="2"/></svg>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" id="filter-analogue" data-color="blue" data-style="solid" data-type="Analogue" checked>
-                    <span class="text-blue-600 font-medium">Analogue (Blue Solid)</span>
-                    <svg width="40" height="2" class="ml-2"><line x1="0" y1="1" x2="40" y2="1" stroke="blue" stroke-width="2"/></svg>
-                </label>
-            </div>
+            <label class="checkbox-label"><input type="checkbox" id="filter-analogue" data-color="blue" data-style="solid" data-type="Analogue" checked><span class="text-blue-600 font-medium">Analogue</span></label>
+<label class="checkbox-label"><input type="checkbox" id="filter-affect" data-color="red" data-style="dashed" data-type="Affect" checked><span class="text-red-600 font-medium">Affect</span></label>
+<label class="checkbox-label"><input type="checkbox" id="filter-manifest" data-color="green" data-style="solid" data-type="Manifest" checked><span class="text-green-600 font-medium">Manifest</span></label>
         </div>
     </div>
 
@@ -106,7 +90,7 @@
 <text xml:space="preserve" text-anchor="middle" x="389.41" y="-572.33" font-family="Inter" font-size="10.00">DValue</text>
 </g>
 <!-- ACost&#45;&gt;DValue -->
-<g id="edge6" class="edge">
+<g id="edge2" class="edge">
 <title>ACost&#45;&gt;DValue</title>
 <path fill="none" stroke="blue" stroke-width="2" d="M533.34,-424.11C499.16,-455.45 447.54,-507.07 416.25,-541.21"/>
 </g>
@@ -117,7 +101,7 @@
 <text xml:space="preserve" text-anchor="middle" x="211.12" y="-394.05" font-family="Inter" font-size="10.00">EClinic</text>
 </g>
 <!-- ACost&#45;&gt;EClinic -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>ACost&#45;&gt;EClinic</title>
 <path fill="none" stroke="red" stroke-width="3" stroke-dasharray="5,2" d="M524.33,-392.57C460.31,-389.9 340.38,-389.72 268.94,-392.04"/>
 <polygon fill="red" stroke="red" stroke-width="3" points="268.87,-388.54 259,-392.41 269.13,-395.54 268.87,-388.54"/>
@@ -129,7 +113,7 @@
 <text xml:space="preserve" text-anchor="middle" x="389.41" y="-215.76" font-family="Inter" font-size="10.00">EOthers</text>
 </g>
 <!-- ACost&#45;&gt;EOthers -->
-<g id="edge12" class="edge">
+<g id="edge5" class="edge">
 <title>ACost&#45;&gt;EOthers</title>
 <path fill="none" stroke="red" stroke-width="2" stroke-dasharray="5,2" d="M545.2,-359.99C517.8,-327.22 471.46,-280.42 436.3,-249.69"/>
 <polygon fill="red" stroke="red" stroke-width="2" points="438.87,-247.29 429,-243.44 434.32,-252.6 438.87,-247.29"/>
@@ -141,13 +125,13 @@
 <text xml:space="preserve" text-anchor="middle" x="705.14" y="-559.75" font-family="Inter" font-size="10.00">PMotivation</text>
 </g>
 <!-- ACost&#45;&gt;PMotivation -->
-<g id="edge13" class="edge">
+<g id="edge6" class="edge">
 <title>ACost&#45;&gt;PMotivation</title>
 <path fill="none" stroke="red" stroke-width="2" stroke-dasharray="5,2" d="M590.93,-433.83C611.09,-460.42 640.62,-496.27 664.63,-523.46"/>
 <polygon fill="red" stroke="red" stroke-width="2" points="661.92,-525.67 671.19,-530.8 667.13,-521.01 661.92,-525.67"/>
 </g>
 <!-- ACost&#45;&gt;PMotivation -->
-<g id="edge46" class="edge">
+<g id="edge7" class="edge">
 <title>ACost&#45;&gt;PMotivation</title>
 <path fill="none" stroke="green" d="M599.43,-426.78C622.12,-451.83 652.39,-488.1 674.76,-516.91"/>
 <polygon fill="green" stroke="green" points="671.94,-518.98 680.81,-524.78 677.49,-514.72 671.94,-518.98"/>
@@ -159,26 +143,26 @@
 <text xml:space="preserve" text-anchor="middle" x="591.97" y="-687.5" font-family="Inter" font-size="10.00">EAvailable</text>
 </g>
 <!-- ACost&#45;&gt;EAvailable -->
-<g id="edge5" class="edge">
+<g id="edge3" class="edge">
 <title>ACost&#45;&gt;EAvailable</title>
 <path fill="none" stroke="red" stroke-width="2" stroke-dasharray="5,2" d="M566.33,-440.56C568.36,-492.29 575.35,-578.82 581.94,-635.31"/>
 <polygon fill="red" stroke="red" stroke-width="2" points="578.43,-635.42 583.11,-644.93 585.38,-634.58 578.43,-635.42"/>
 </g>
 <!-- DValue&#45;&gt;ACost -->
-<g id="edge50" class="edge">
+<g id="edge17" class="edge">
 <title>DValue&#45;&gt;ACost</title>
 <path fill="none" stroke="blue" d="M423.77,-548.52C457.94,-517.18 509.56,-465.56 540.85,-431.42"/>
 </g>
 <!-- DValue&#45;&gt;EOthers -->
-<g id="edge17" class="edge">
+<g id="edge20" class="edge">
 <title>DValue&#45;&gt;EOthers</title>
-<path fill="none" stroke="blue" d="M394.01,-532.09C396.88,-463.51 396.88,-330.79 394.01,-262.23"/>
+<path fill="none" stroke="red" stroke-dasharray="5,2" d="M394.01,-532.09C396.73,-467.13 396.87,-344.61 394.44,-273.59"/>
+<polygon fill="red" stroke="red" points="397.94,-273.6 394.07,-263.74 390.95,-273.87 397.94,-273.6"/>
 </g>
 <!-- DValue&#45;&gt;EOthers -->
-<g id="edge37" class="edge">
+<g id="edge21" class="edge">
 <title>DValue&#45;&gt;EOthers</title>
-<path fill="none" stroke="red" stroke-dasharray="5,2" d="M384.81,-532.09C382.09,-467.13 381.95,-344.61 384.38,-273.59"/>
-<polygon fill="red" stroke="red" points="387.87,-273.87 384.75,-263.74 380.88,-273.6 387.87,-273.87"/>
+<path fill="none" stroke="blue" d="M384.81,-532.09C381.94,-463.51 381.94,-330.79 384.81,-262.23"/>
 </g>
 <!-- AEfficiency -->
 <g id="node5" class="node">
@@ -187,12 +171,12 @@
 <text xml:space="preserve" text-anchor="middle" x="745.98" y="-394.05" font-family="Inter" font-size="10.00">AEfficiency</text>
 </g>
 <!-- DValue&#45;&gt;AEfficiency -->
-<g id="edge35" class="edge">
+<g id="edge18" class="edge">
 <title>DValue&#45;&gt;AEfficiency</title>
 <path fill="none" stroke="blue" d="M430.22,-559.98C500.21,-528.48 642,-457.58 709.16,-420.5"/>
 </g>
 <!-- DValue&#45;&gt;PMotivation -->
-<g id="edge27" class="edge">
+<g id="edge22" class="edge">
 <title>DValue&#45;&gt;PMotivation</title>
 <path fill="none" stroke="blue" d="M432.98,-573.72C493.2,-571.32 601.26,-567.02 661.51,-564.62"/>
 </g>
@@ -203,7 +187,7 @@
 <text xml:space="preserve" text-anchor="middle" x="43.2" y="-479.38" font-family="Inter" font-size="10.00">ABenefit</text>
 </g>
 <!-- DValue&#45;&gt;ABenefit -->
-<g id="edge22" class="edge">
+<g id="edge16" class="edge">
 <title>DValue&#45;&gt;ABenefit</title>
 <path fill="none" stroke="blue" d="M347.3,-564.15C280.72,-546.28 151.86,-511.68 85.28,-493.8"/>
 </g>
@@ -214,30 +198,30 @@
 <text xml:space="preserve" text-anchor="middle" x="705.14" y="-228.34" font-family="Inter" font-size="10.00">DPersonal</text>
 </g>
 <!-- DValue&#45;&gt;DPersonal -->
-<g id="edge39" class="edge">
+<g id="edge19" class="edge">
 <title>DValue&#45;&gt;DPersonal</title>
 <path fill="none" stroke="blue" d="M409.97,-537.38C435.27,-492.55 481.29,-417.3 533.03,-362.5 574.28,-318.81 631.2,-278.55 668.08,-254.49"/>
 </g>
 <!-- EClinic&#45;&gt;ACost -->
-<g id="edge49" class="edge">
+<g id="edge28" class="edge">
 <title>EClinic&#45;&gt;ACost</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M254.49,-401.77C319.45,-404.49 441.97,-404.63 512.99,-402.2"/>
 <polygon fill="red" stroke="red" points="512.98,-405.7 522.84,-401.83 512.72,-398.71 512.98,-405.7"/>
 </g>
 <!-- EClinic&#45;&gt;DValue -->
-<g id="edge7" class="edge">
+<g id="edge31" class="edge">
 <title>EClinic&#45;&gt;DValue</title>
-<path fill="none" stroke="green" stroke-width="2" d="M238.07,-431.53C266.71,-462.77 312.3,-508.58 346,-540.12"/>
-<polygon fill="green" stroke="green" stroke-width="2" points="343.23,-542.33 352.94,-546.56 347.99,-537.19 343.23,-542.33"/>
+<path fill="none" stroke="red" stroke-dasharray="5,2" d="M238.07,-431.53C266.95,-463.04 313.08,-509.36 346.86,-540.93"/>
+<polygon fill="red" stroke="red" points="344.34,-543.36 354.05,-547.59 349.09,-538.22 344.34,-543.36"/>
 </g>
 <!-- EClinic&#45;&gt;DValue -->
-<g id="edge38" class="edge">
+<g id="edge32" class="edge">
 <title>EClinic&#45;&gt;DValue</title>
-<path fill="none" stroke="red" stroke-dasharray="5,2" d="M245.48,-424.11C276.99,-453 323.32,-499.13 354.88,-532.91"/>
-<polygon fill="red" stroke="red" points="352.18,-535.14 361.54,-540.1 357.31,-530.38 352.18,-535.14"/>
+<path fill="none" stroke="green" stroke-width="2" d="M245.48,-424.11C276.72,-452.75 322.53,-498.34 354.07,-532.04"/>
+<polygon fill="green" stroke="green" stroke-width="2" points="351.14,-534.03 360.51,-538.99 356.28,-529.27 351.14,-534.03"/>
 </g>
 <!-- EClinic&#45;&gt;AEfficiency -->
-<g id="edge24" class="edge">
+<g id="edge29" class="edge">
 <title>EClinic&#45;&gt;AEfficiency</title>
 <path fill="none" stroke="green" d="M254.74,-396.71C256.57,-396.84 258.38,-396.99 260.16,-397.17 329.78,-404.33 498.71,-466.13 568.52,-461.18 593.58,-459.41 652.35,-436.76 695.4,-418.91"/>
 <polygon fill="green" stroke="green" points="696.7,-422.16 704.58,-415.08 694.01,-415.7 696.7,-422.16"/>
@@ -249,25 +233,25 @@
 <text xml:space="preserve" text-anchor="middle" x="43.2" y="-308.71" font-family="Inter" font-size="10.00">AOutdated</text>
 </g>
 <!-- EClinic&#45;&gt;AOutdated -->
-<g id="edge14" class="edge">
+<g id="edge30" class="edge">
 <title>EClinic&#45;&gt;AOutdated</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M172.18,-377.38C148.33,-365.26 117.61,-349.65 92.14,-336.71"/>
 <polygon fill="red" stroke="red" points="93.79,-333.62 83.29,-332.21 90.61,-339.86 93.79,-333.62"/>
 </g>
 <!-- EOthers&#45;&gt;ACost -->
-<g id="edge23" class="edge">
+<g id="edge37" class="edge">
 <title>EOthers&#45;&gt;ACost</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M411.91,-256.07C439.54,-289.11 486.44,-336.44 521.71,-367.15"/>
 <polygon fill="red" stroke="red" points="519.38,-369.77 529.26,-373.6 523.93,-364.44 519.38,-369.77"/>
 </g>
 <!-- EOthers&#45;&gt;ACost -->
-<g id="edge43" class="edge">
+<g id="edge38" class="edge">
 <title>EOthers&#45;&gt;ACost</title>
 <path fill="none" stroke="green" d="M420.06,-249.53C450.16,-279.64 496.2,-325.68 528.86,-358.33"/>
 <polygon fill="green" stroke="green" points="526.23,-360.66 535.78,-365.26 531.18,-355.71 526.23,-360.66"/>
 </g>
 <!-- EOthers&#45;&gt;PMotivation -->
-<g id="edge32" class="edge">
+<g id="edge40" class="edge">
 <title>EOthers&#45;&gt;PMotivation</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M409.97,-256.97C435.27,-301.79 481.29,-377.05 533.03,-431.84 570.89,-471.95 621.96,-509.17 658.62,-533.61"/>
 <polygon fill="red" stroke="red" points="656.55,-536.43 666.82,-539.02 660.4,-530.59 656.55,-536.43"/>
@@ -279,13 +263,13 @@
 <text xml:space="preserve" text-anchor="middle" x="122.51" y="-630.5" font-family="Inter" font-size="10.00">PEducation</text>
 </g>
 <!-- EOthers&#45;&gt;PEducation -->
-<g id="edge21" class="edge">
+<g id="edge39" class="edge">
 <title>EOthers&#45;&gt;PEducation</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M365.96,-255.33C317.32,-330.91 205.56,-504.58 152.08,-587.68"/>
 <polygon fill="red" stroke="red" points="149.29,-585.54 146.83,-595.84 155.18,-589.33 149.29,-585.54"/>
 </g>
 <!-- EOthers&#45;&gt;ABenefit -->
-<g id="edge45" class="edge">
+<g id="edge36" class="edge">
 <title>EOthers&#45;&gt;ABenefit</title>
 <path fill="none" stroke="blue" d="M352.53,-241.54C309.19,-268.66 235.66,-316.24 176.45,-362.5 139.9,-391.06 100.76,-427.03 74.42,-452.1"/>
 </g>
@@ -300,13 +284,13 @@
 <path fill="none" stroke="blue" stroke-width="2" d="M705.18,-412.65C635.19,-444.15 493.39,-515.05 426.23,-552.13"/>
 </g>
 <!-- AEfficiency&#45;&gt;EClinic -->
-<g id="edge42" class="edge">
+<g id="edge11" class="edge">
 <title>AEfficiency&#45;&gt;EClinic</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M704.77,-410.93C660.93,-425.14 594.23,-445.38 567.7,-446.2 432.33,-450.43 401.89,-380.28 263.71,-382.81"/>
 <polygon fill="red" stroke="red" points="263.64,-379.31 253.76,-383.13 263.86,-386.31 263.64,-379.31"/>
 </g>
 <!-- AEfficiency&#45;&gt;EOthers -->
-<g id="edge36" class="edge">
+<g id="edge12" class="edge">
 <title>AEfficiency&#45;&gt;EOthers</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M707.14,-377.75C641.86,-345.11 510.24,-279.3 438.59,-243.48"/>
 <polygon fill="red" stroke="red" points="440.33,-240.44 429.83,-239.09 437.2,-246.7 440.33,-240.44"/>
@@ -318,40 +302,40 @@
 <text xml:space="preserve" text-anchor="middle" x="432.39" y="-748.02" font-family="Inter" font-size="10.00">AQuality</text>
 </g>
 <!-- AEfficiency&#45;&gt;AQuality -->
-<g id="edge33" class="edge">
+<g id="edge9" class="edge">
 <title>AEfficiency&#45;&gt;AQuality</title>
 <path fill="none" stroke="blue" d="M717.04,-429.84C657.3,-497.27 520.94,-651.19 461.26,-718.56"/>
 </g>
 <!-- EAvailable&#45;&gt;ACost -->
-<g id="edge3" class="edge">
+<g id="edge23" class="edge">
 <title>EAvailable&#45;&gt;ACost</title>
 <path fill="none" stroke="green" stroke-width="3" d="M593.34,-647.23C591.32,-596.05 584.45,-510.79 577.93,-454.28"/>
 <polygon fill="green" stroke="green" stroke-width="3" points="581.41,-453.88 576.73,-444.37 574.46,-454.72 581.41,-453.88"/>
 </g>
 <!-- EAvailable&#45;&gt;EClinic -->
-<g id="edge41" class="edge">
+<g id="edge27" class="edge">
 <title>EAvailable&#45;&gt;EClinic</title>
 <path fill="none" stroke="green" d="M560.59,-660.28C527.67,-629.02 473.89,-579.52 424.08,-540.79 368.94,-497.9 301.54,-453.72 257.53,-425.9"/>
 <polygon fill="green" stroke="green" points="259.57,-423.04 249.25,-420.68 255.84,-428.97 259.57,-423.04"/>
 </g>
 <!-- EAvailable&#45;&gt;AEfficiency -->
-<g id="edge16" class="edge">
+<g id="edge24" class="edge">
 <title>EAvailable&#45;&gt;AEfficiency</title>
 <path fill="none" stroke="blue" d="M610.05,-651.17C625.48,-618.03 648.58,-569.6 670.47,-528.21 687.47,-496.06 708.18,-460.35 723.61,-434.33"/>
 </g>
 <!-- EAvailable&#45;&gt;AQuality -->
-<g id="edge4" class="edge">
+<g id="edge26" class="edge">
 <title>EAvailable&#45;&gt;AQuality</title>
 <path fill="none" stroke="blue" stroke-width="3" d="M551.29,-706.05C527.28,-715.16 496.99,-726.64 473,-735.74"/>
 </g>
 <!-- EAvailable&#45;&gt;AOutdated -->
-<g id="edge20" class="edge">
+<g id="edge25" class="edge">
 <title>EAvailable&#45;&gt;AOutdated</title>
 <path fill="none" stroke="green" d="M562.21,-658.7C530.4,-625.93 477.31,-575.02 424.08,-540.79 322.96,-475.74 277.43,-497.11 176.45,-431.84 141.18,-409.05 106.08,-376.95 80.77,-351.69"/>
 <polygon fill="green" stroke="green" points="83.49,-349.47 73.97,-344.82 78.52,-354.39 83.49,-349.47"/>
 </g>
 <!-- AQuality&#45;&gt;DValue -->
-<g id="edge40" class="edge">
+<g id="edge14" class="edge">
 <title>AQuality&#45;&gt;DValue</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M422.1,-709.06C416.21,-685.01 408.77,-654.61 402.48,-628.88"/>
 <polygon fill="red" stroke="red" points="405.91,-628.16 400.13,-619.27 399.11,-629.82 405.91,-628.16"/>
@@ -363,29 +347,29 @@
 <text xml:space="preserve" text-anchor="middle" x="262.97" y="-727.45" font-family="Inter" font-size="10.00">ESupport</text>
 </g>
 <!-- ESupport&#45;&gt;ACost -->
-<g id="edge34" class="edge">
+<g id="edge44" class="edge">
 <title>ESupport&#45;&gt;ACost</title>
 <path fill="none" stroke="blue" d="M299.98,-708.07C334.57,-685.9 386.39,-649.7 424.08,-610.13 476.06,-555.56 522,-480.23 547.22,-435.33"/>
 </g>
 <!-- ESupport&#45;&gt;EClinic -->
-<g id="edge29" class="edge">
+<g id="edge45" class="edge">
 <title>ESupport&#45;&gt;EClinic</title>
 <path fill="none" stroke="green" d="M256.3,-687.67C246.9,-627.24 229.77,-517.07 219.52,-451.15"/>
 <polygon fill="green" stroke="green" points="223.04,-451.01 218.04,-441.67 216.12,-452.09 223.04,-451.01"/>
 </g>
 <!-- ESupport&#45;&gt;PMotivation -->
-<g id="edge31" class="edge">
+<g id="edge47" class="edge">
 <title>ESupport&#45;&gt;PMotivation</title>
 <path fill="none" stroke="blue" d="M303.77,-715.1C388.01,-683.15 580.28,-610.23 664.43,-578.32"/>
 </g>
 <!-- ESupport&#45;&gt;PEducation -->
-<g id="edge28" class="edge">
+<g id="edge46" class="edge">
 <title>ESupport&#45;&gt;PEducation</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M227.16,-705.86C209.08,-693.38 186.96,-678.11 167.72,-664.83"/>
 <polygon fill="red" stroke="red" points="169.72,-661.95 159.5,-659.15 165.74,-667.71 169.72,-661.95"/>
 </g>
 <!-- PEducation&#45;&gt;PMotivation -->
-<g id="edge1" class="edge">
+<g id="edge48" class="edge">
 <title>PEducation&#45;&gt;PMotivation</title>
 <path fill="none" stroke="red" stroke-width="3" stroke-dasharray="5,2" d="M166.12,-634.24C219.1,-634.51 311.1,-633.41 389.41,-624.49 481.17,-614.03 586.13,-591.38 648.94,-576.65"/>
 <polygon fill="red" stroke="red" stroke-width="3" points="649.49,-580.11 658.41,-574.4 647.87,-573.3 649.49,-580.11"/>
@@ -397,18 +381,18 @@
 <text xml:space="preserve" text-anchor="middle" x="432.39" y="-40.07" font-family="Inter" font-size="10.00">PTrust</text>
 </g>
 <!-- PEducation&#45;&gt;PTrust -->
-<g id="edge19" class="edge">
+<g id="edge49" class="edge">
 <title>PEducation&#45;&gt;PTrust</title>
 <path fill="none" stroke="green" d="M146.76,-597.29C172.79,-557.54 214.62,-491.52 245.8,-431.84 301.47,-325.27 301.48,-292.01 354.74,-184.21 370.38,-152.55 389.5,-117.79 404.85,-90.71"/>
 <polygon fill="green" stroke="green" points="407.88,-92.46 409.79,-82.04 401.8,-89 407.88,-92.46"/>
 </g>
 <!-- ABenefit&#45;&gt;ACost -->
-<g id="edge26" class="edge">
+<g id="edge1" class="edge">
 <title>ABenefit&#45;&gt;ACost</title>
 <path fill="none" stroke="blue" d="M86.12,-475.52C184.72,-459.48 426.46,-420.15 524.92,-404.13"/>
 </g>
 <!-- AOutdated&#45;&gt;PTrust -->
-<g id="edge15" class="edge">
+<g id="edge13" class="edge">
 <title>AOutdated&#45;&gt;PTrust</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M79.12,-287.05C150.36,-237.87 309.42,-128.08 387.46,-74.22"/>
 <polygon fill="red" stroke="red" points="389.07,-77.35 395.31,-68.79 385.1,-71.59 389.07,-77.35"/>
@@ -420,13 +404,13 @@
 <text xml:space="preserve" text-anchor="middle" x="122.51" y="-157.6" font-family="Inter" font-size="10.00">ELaw</text>
 </g>
 <!-- ELaw&#45;&gt;ACost -->
-<g id="edge18" class="edge">
+<g id="edge33" class="edge">
 <title>ELaw&#45;&gt;ACost</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M160.85,-181.09C241.8,-224.08 430,-324.04 519.18,-371.4"/>
 <polygon fill="red" stroke="red" points="517.48,-374.46 527.95,-376.06 520.76,-368.28 517.48,-374.46"/>
 </g>
 <!-- ELaw&#45;&gt;AQuality -->
-<g id="edge9" class="edge">
+<g id="edge34" class="edge">
 <title>ELaw&#45;&gt;AQuality</title>
 <path fill="none" stroke="blue" stroke-width="2" d="M146.76,-197.05C172.79,-236.8 214.62,-302.83 245.8,-362.5 301.47,-469.07 301.48,-502.33 354.74,-610.13 372.38,-645.83 394.44,-685.48 410.54,-713.62"/>
 </g>
@@ -437,7 +421,7 @@
 <text xml:space="preserve" text-anchor="middle" x="591.97" y="-100.59" font-family="Inter" font-size="10.00">DSit</text>
 </g>
 <!-- ELaw&#45;&gt;DSit -->
-<g id="edge30" class="edge">
+<g id="edge35" class="edge">
 <title>ELaw&#45;&gt;DSit</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M165.84,-155.46C251.69,-145.04 443.24,-121.78 537.48,-110.34"/>
 <polygon fill="red" stroke="red" points="537.74,-113.83 547.24,-109.15 536.9,-106.88 537.74,-113.83"/>
@@ -449,31 +433,31 @@
 <text xml:space="preserve" text-anchor="middle" x="262.97" y="-60.65" font-family="Inter" font-size="10.00">ERegional</text>
 </g>
 <!-- ERegional&#45;&gt;ACost -->
-<g id="edge47" class="edge">
+<g id="edge41" class="edge">
 <title>ERegional&#45;&gt;ACost</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M299.98,-86.28C334.57,-108.44 386.39,-144.64 424.08,-184.21 472.41,-234.95 515.51,-303.62 541.6,-349.11"/>
 <polygon fill="red" stroke="red" points="538.49,-350.73 546.47,-357.69 544.58,-347.27 538.49,-350.73"/>
 </g>
 <!-- ERegional&#45;&gt;EClinic -->
-<g id="edge44" class="edge">
+<g id="edge42" class="edge">
 <title>ERegional&#45;&gt;EClinic</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M256.3,-106.68C246.9,-167.11 229.77,-277.27 219.52,-343.19"/>
 <polygon fill="red" stroke="red" points="216.12,-342.25 218.04,-352.67 223.04,-343.33 216.12,-342.25"/>
 </g>
 <!-- ERegional&#45;&gt;EOthers -->
-<g id="edge48" class="edge">
+<g id="edge43" class="edge">
 <title>ERegional&#45;&gt;EOthers</title>
 <path fill="none" stroke="green" d="M290.4,-97.43C309.23,-120.52 334.36,-151.36 354.6,-176.18"/>
 <polygon fill="green" stroke="green" points="351.82,-178.31 360.85,-183.85 357.25,-173.89 351.82,-178.31"/>
 </g>
 <!-- PTrust&#45;&gt;PMotivation -->
-<g id="edge25" class="edge">
+<g id="edge50" class="edge">
 <title>PTrust&#45;&gt;PMotivation</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M452.99,-81.44C485.15,-141.25 549.14,-260.65 602.37,-362.5 629.27,-413.98 659.56,-473.19 680.25,-513.83"/>
 <polygon fill="red" stroke="red" points="677.08,-515.33 684.73,-522.65 683.32,-512.15 677.08,-515.33"/>
 </g>
 <!-- DSit&#45;&gt;DValue -->
-<g id="edge11" class="edge">
+<g id="edge15" class="edge">
 <title>DSit&#45;&gt;DValue</title>
 <path fill="none" stroke="red" stroke-width="2" stroke-dasharray="5,2" d="M574.87,-143.53C538.28,-228.76 452.38,-428.81 411.62,-523.73"/>
 <polygon fill="red" stroke="red" stroke-width="2" points="408.46,-522.23 407.73,-532.8 414.89,-524.99 408.46,-522.23"/>

@@ -323,10 +323,10 @@ digraph ROCK_network {
   }
   
   # Read HTML template
-  if (!file.exists("public/html_template.html")) {
-    stop("public/html_template.html not found")
+  if (!file.exists("html_template.html")) {
+    stop("html_template.html not found")
   }
-  html_template <- paste(readLines("public/html_template.html"), collapse = "\n")
+  html_template <- paste(readLines("html_template.html"), collapse = "\n")
   
   # Create final HTML
   html_output <- gsub("%EDGE_TYPES%", paste(network_data$edge_types, collapse = ", "), html_template)
@@ -364,7 +364,7 @@ for (i in seq_along(rock_files)) {
     if (length(codes_with_freq) == 0) {
       message(paste("  ⚠ No valid codes remaining after filtering Measured/NotMeasured codes"))
       # Remove existing graph file if it exists
-      output_filename <- file.path("public", "graphs", paste0("graph_case_", case_id, ".html"))
+      output_filename <- file.path("graphs", paste0("graph_case_", case_id, ".html"))
       if (file.exists(output_filename)) {
         file.remove(output_filename)
         message(paste("  🗑️ Removed existing graph file:", output_filename))
@@ -376,7 +376,7 @@ for (i in seq_along(rock_files)) {
     network_data <- convert_rock_codes_to_network(codes_with_freq)
     
     # Generate HTML
-    output_filename <- file.path("public", "graphs", paste0("graph_case_", case_id, ".html"))
+    output_filename <- file.path("graphs", paste0("graph_case_", case_id, ".html"))
     generate_network_graph(network_data, output_filename)
     
   }, error = function(e) {
@@ -407,7 +407,7 @@ if (length(all_codes) > 0) {
   combined_network_data <- convert_rock_codes_to_network(global_codes_with_freq)
   
   # Generate combined HTML
-  generate_network_graph(combined_network_data, file.path("public", "graphs", "network_graph_combined.html"))
+  generate_network_graph(combined_network_data, file.path("graphs", "network_graph_combined.html"))
 }
 
 # Copy files to public directory
