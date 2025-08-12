@@ -1,0 +1,43 @@
+[[cid=case10]]  
+ 
+I: Milyen akadályai lehetnek egyébként annak, hogy kevesebb eszközt és tárgyat dobjál el egy-egy kezelés után? 
+
+C: Az infekciókontrollt gondolnám, mert nyilván a műanyag egyszer használatos szívót nem fújod be még egyszer. [[AQuality->Measured||Affect]]
+
+I: Rendben. 
+
+C: Leginkább ez. 
+
+I: Most jön az hogy a kérdés sor az fix, és lehet hogy már válaszoltál. 
+
+C: Persze. 
+
+I: Törekednél-e annak ellenére a tárgyak újbóli fogászati felhasználására, hogy ez az infekciókontroll szempontjából kevésbé praktikus? 
+
+C: Nem. 
+
+C: Leginkább az általános egészségtudat hiánya, meg a szervezettség hiánya, mert hiába, én meg mi itt 30-an erre figyelünk, hogyha azt mondom neki, hogy figyeljen rá és menjen el a körzeti orvosához vagy fogorvosához, ahol azzal találkozik, hogy durván elhajtják, hogy ne tartsák fel ilyennel, és nyilván ez nem feltétlenül így van, de hallani ilyet, ez nyilván akadálya. [[EOthers->PMotivation||Affect]]
+
+I: Rendben. Mármint, bocsánat, csak az egészségtudatos szemlélet, tehát a páciensek, ugye a körzeti fogorvosok részéről eltetted? 
+
+C: Hát inkább a páciensek részéről. 
+
+I: Rendben. Törekednél-e annak ellenére a prevenciós szemlélet erősítésére, hogy egy magánfogorvosi rendelőben csökkentheti a páciensek bizalmát ha a fogorvos újabb vonatkozásokat javasolt prevenciós céllal? 
+
+C: Hát alapvetően azért közgazdász nem vagyok, de nem csak állami, hanem magánegészségügyben is, hanem anyagi megfontolásból javasolja prevenciós céllal, akkor végső soron a páciens is jobban jár. Minekutána egy barázdazárás, olcsóbb, mint egy MOD tömés. 
+
+I: Az igaz. 
+
+C: Nem tartanám magamat ettől vissza. 
+
+I: Értem. A meglátásod szerint mennyire használod ki ezeket a lehetőségeket, melyeket a digitális technológiák biztosítanak a fogorvoslás számára?  
+
+C: Most attól függ, hogy mi a kérdés. Értem, csak attól, hogy lehet szkennelni, de nem biztos, hogy az valami olyan fontos, mint egy lenyomat. Tehát, ha úgy nézem, hogy valamit lehet szkennelni is, meg lenyomatot is venni róla, akkor inkább lenyomatot veszek, mert pontosabbnak találom, de például ízületi diagnosztikában ott kihasználom, meg ott egy plusz segítő tényezőnek tartom, meg igyekszem olyan laborral dolgozni, akik digitálisan terveznek. [[AQuality->Measured||Affect]]
+
+I: Az utolsó kettő kérdés. Milyen akadályai lehetnek annak, hogy több digitális technológiát alkalmazzunk? 
+
+C: Mondjuk itt nem én veszem, de nyilván részben az ára, meg nekem sokszor még a pontossága meg a bonyolultsága azért a megszokott és begyakorolt folyamatokhoz képest. [[AEfficiency->AQuality||Analogue]]
+
+I: Törekednél-e annak ellenére digitális technológiák alkalmazására, hogy ezek kezdetben általában drágábbak a hagyományos megoldásoknál, és a fogorvosoknak új készségeket kell elsajátítaniuk a használatukhoz? 
+
+C: Mondom, attól függ, milyen téren. Tehát minden szemnek maga felé hajlik a keze, ízületi diagnosztika téren igen, áldoznék rá. Lenyomatvételnél nem. Részben, azt hiszem ezt a választ tudom rá adni. [[ACost->Measured||Affect]]

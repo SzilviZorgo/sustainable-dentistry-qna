@@ -1,0 +1,47 @@
+[[cid=case9]]  
+
+I: világos. És szerinted hogyan tudnád csökkenteni a munkádnak a környezeti terhelését, és hajlandó lennél-e ennek érdekében változtatásokat alkalmazni? 
+
+C: Igazából hogyan tudnánk csökkenteni? Erre mondjál valamit, mert szerintem sehogyan. Én úgy gondolom, hogy fertőtleníteni kell, és hogy papírtörölköző, gumikesztyű, tehát a környezeti lábnyomunk viszonylag magas, de ezen nem lehet változtatni, mert ez a munkaveszélyes. [[EAvailable->AQuality||Analogue]]
+
+I: Világos. A meglátásod... 
+
+C: Lebomló papír, a gumikesztyű, azt még nem tudom, hogy föltalálták-e már, amit lebontanak a baktériumok, amik képesek műanyagbontásra. [[EAvailable->NotMeasured||Affect]]
+
+I: Aha. Hú, azt én sem tudom, hogy létezik-e ilyen, de érdekes találmány lenne. 
+
+C: Azért mondom, hogy igazából nem látok sehol semmilyen lehetőséget erre a környezeti lábnyomcsökkentésre. 
+
+I: Rendben. És szerinted milyen akadályai lehetnek annak, hogy kevesebb eszközt és tárgyat dobjunk el egy-egy kezelés után. 
+
+C: Nem látok semmilyen akadályt, egyszerűen előírások vannak, hogy biztonságosan dolgozzunk és az egyszer használatos dolgokat használjuk. Tehát egyszerűen ez nem akadály, ez egy alap. [[ELaw->AQuality||Analogue]]
+
+I: Mindjárt a másik témakörhöz érünk, még kettő kérdés van ehhez, törekednél-e annak ellenére tárgyak újbóli fogászati felhasználására, hogy ez az infekciókontroll szempontjából kevésbé praktikus? 
+
+C: Nem törekednék. 
+
+I: Rendben. Szerinted milyen akadályai lehetnek annak, hogy erősítsük a prevenciós szemléletet? 
+
+C: Hát elég kemény véleményem van. Tehát azt gondolom, hogy a NEAK rendeléseken nem ingyenességet kellene a kedves páciensnek adni, hanem ahhoz kellene kötni, ha járt fogorvoshoz szűrésre, tehát törődött önmagával, évente legalább egyszer, akkor járjon neki az ingyenesség, de hogyha 2-3-4-5-10 éve nem volt fogorvosnál, akkor fizesse ki azt a tömést, mert nagyon sokban tehet arról, hogy hogyan néz ki a szája. Tehát egy felelősebb, öngondoskodó páciens szemléletre volna szükség. [[ESupport->NotMeasured||Affect]] [[ESupport->PMotivation||Analogue]]
+
+I: És a nem NEAK rendeléseken? Tehát a magánrendeléseken? 
+
+C: Mit mondjak a magánrendelésekre? 
+
+I: Hogy ott ezen kívül látsz-e még plusz akadályt a prevenciós szemlélet erősítésére? 
+
+C: Akadályt? Egyáltalán, oda egy motivált beteg érkezik általában, és együttműködő, kicsit jobb a helyzet. 
+
+I: És törekednél-e annak ellenére a prevenciós szemlélet erősítésére, hogy a magánfogorvosi rendelők pácienseinek bizalmát csökkentheti, ha a fogorvos újabb prevenciós beavatkozásokat javasol? 
+
+C: De miért csökkentené a bizalmunkat? Nem értem a kérdést sem. 
+
+I: Hát ugye jön a fogorvoshoz A problémával, A panasszal, és te ezen kívül javasolsz prevenciós beavatkozásokat. 
+
+C: Annyi mindent látunk, hogy szükséges javasolni. 
+
+ C: Sok digitális technológia van, amit az állami rendelőkben nem nagyon tudsz megfinanszírozni, hogy vegyél egy szkennert, annak egy nagyon komoly összege van. Röntgen az bizonyos beavatkozásoknál kötelező, mint például a gyökérkezelés, tehát azt használom, hogy a digitális technológia, a beteg életút követése, az is annak számít, az még végül is most már teljesen olajozottan működik. Az adminisztrációja, a betegadminisztráció is. Röntgenen kívül én nem használok más digitális technológiát. [[ESupport->Measured||Affect]] [[ACost->Measured||Affect]]
+
+I: Törekednél-e annak ellenére digitális technológiák alkalmazására, hogy ezek kezdetben általában drágábbak a hagyományos megoldásoknál és a fogorvosoknak új készségeket kell elsajátítaniuk a használatukhoz? 
+
+C: Nem a készségekre megalázó dolgok bevezetésével van a gond, hanem az anyagi hiánnyal. 

@@ -1,0 +1,55 @@
+[[cid=case6]]  
+
+C: Találkoztam vele, az igazából, ha titeket nem ismernélek, nem találkoztam volna vele. Azokon a szakmai fórumokon, amiken én mozgok, ott ezek a témák egyáltalán nem kerültek még el eddig elő, vagy én járok nem jó helyre. A másik kérdés az az, hogy volt-e olyan dolog, ami a tőletek megtudott információ, és azt próbáltam ebbe építeni. Azt hiszem, hogy az ésszerű, veszélyes hulladék, amúgy is egy viszonylag magas költséget jelent. [Szia, gyere csak nyugodtan!] Magas költséget jelent a veszélyes hulladék elszállítása a rendelőből, így például annak az optimalizált gyűjtése az szándékoltan megvalósul tulajdonképpen a rendelőben. Ezen kívül olyan nagyon más, nem tudom, mit mondhatnék még. Nem váltottunk papír pohárra, meg ilyenek. [[ACost->DValue||Analogue]]
+
+I: Szerinted hogyan lehetne csökkenteni a munkád környezeti terhelését, és hajlandó lennél-e ennek érdekében változtatásokat alkalmazni?  
+
+C: Szerintem rengeteg egyszer használatos dolgot használunk, abban mindenféleképpen egy anyag és szemléletváltással szerintem lehetne a környezeti terhelést csökkenteni. Erre még eddig jó megoldást nem láttam, de ha versenyképes lenne a korábbi megoldással árban, akkor viszont biztos, hogy szorgalmaznám annak a változását, bevezetését. [[DValue->Measured||Affect]]   [[EAvailable->ACost||Manifest]] 
+
+I: A meglátásod szerint mennyire használod ki azokat a lehetőségeket, amelyekkel csökkentheted az eszközök és tárgyak eldobását egy-egy kezelés során? 
+
+C: Az talán még rosszabbul, biztos, hogy lehetne még a szemetet még jobban megszelektálni például, jobban szétválogatni, még akár annak árán is, hogy ez újabb szemétgyűjtő konténerek kihelyezését jelenti. [[ACost->NotMeasured||Analogue]]
+
+I: Szerinted milyen akadályai lehetnek annak, hogy kevesebb eszközt és tárgyat dobjunk el egy-egy kezelés után? 
+
+C: Milyen akadályaid? 
+
+I: Igen. 
+
+C: Az idő az egyik. Nagyon kevés idő marad ezeknek az eszközöknek a szelektálására. Két beteg közötti gyors cserénél erre nincs idő, hogy szelektáljunk. Ez egy akadály. A másik akadálya az a motiválatlanság, a személyzet motiválatlansága, tehát nincsenek sem jutalmazva, sem megszidva az esetleges figyelmetlenségért, és nincsenek ellenőrizve sem. Tehát még az ideológiai szándék sincs meg. Én ezt a két komolyabb kategóriát mondanám. [[AEfficiency->DValue||Analogue]] [[AEfficiency->NotMeasured||Affect]]
+
+I: Világos, törekednél-e annak ellenére tárgyak újbóli fogászati felhasználására, hogy ez az infekciókontroll szempontjából kevésbé praktikus? 
+
+C: Ha mondjuk valamilyen eldobhatós, hát nem, inkább úgy fogalmaznék, hogy például egy olyan eszköz, amit egyébként rendszerint eldobunk, de tisztíthatósága folytán lenne lehetőség arra, hogy újra használjuk, elképzelhetőnek tartom, de a korábbi gyakorlatból bevett üvegpohár alkalmazását én higiéniátlannak tartom, mint páciens. Én nem szeretném a pácienseimet erre kényszeríteni, hogy egy olyan üvegpohárból igyanak, ami izé. Nem tudom, hogy mennyivel jobb egy eleve műanyag pohár elmosása, nem tudom, ezen nem gondolkodtam, inkább azt mondom.
+[[EAvailable->Measured||Affect]] [[Measured->PTrust||Affect]]
+
+ I: Tehát mennyire jelentős a munkakörnyezet megválasztásakor, hogy legyen újrahasznosítható hulladékot és vegyi hulladékot gyűjtő tároló és miért? 
+
+C: Hát a munkahelyválasztásnál ez nem szempont. Nem szempont. Az egyik munkahelyet választott, a másik nem választott a részemről. A választott munkahelyem, tehát a saját munkahelyemnél ott vezető tulajdonosként azt mondom, hogy sokkal inkább egy ár-érték arány megtalálása a célom, mintsem az elvek kergetése. A másik munkahelyemen pedig semmi beleszólásom nincs, tehát nem azért jöttem a klinikára, mert itt másképp gyűjtik a szemetet. [[ACost->DValue||Analogue]] 
+
+I: Milyen akadályai lehetnek annak, hogy erősítsük a prevenciós szemléletet? 
+
+C: Azt hiszem mindkét oldal alulképzettsége az elsődleges ok, tehát a fogadó és adó oldal képzetlensége, másfelől pedig azt hiszem, hogy van egy olyan néphagyomány nálunk, ami még nem öltött generációs mértéket, tehát amit a svédek megvalósítottak ezelőtt 40-50 évvel, vagy x évvel, ahhoz mi még hozzá sem fogtunk. A prevenció terén való fejlődésünk szerintem alulfinanszírozott. [[DValue->PMotivation||Analogue]] [[ESupport->Measured||Affect]] [[ERegional->ESupport||Affect]
+
+I: Itt a néphagyomány alatt a fogorvosok, vagy a páciensek? 
+
+C: Is. Sok fogorvos van még szerintem. Azért most, ha magyarországi átlagot nézünk, és nem Budapestre koncentrálunk, mert nyilván Budapesten teljesen más keresztmetszetet adna egy ilyen vizsgálat. Szerintem országosan nézve még mindig nem a prevenciós szemlélet az, ami jelen van, hanem sokkal inkább a fogpótlás tölti be a szerepet . És ez szerintem befolyásolja azt is, hogy mennyi idő jut a prevencióra. 
+
+[[PMotivation->Measured||Affect]]
+
+I: És a svéd modell alatt mire gondoltál pontosan? 
+
+C: Arra gondoltam, hogyha a prevencióra sokkal nagyobb állami hangsúly fektetődne, akár programok szervezésében, akár oktató kampányok tekintetében, tehát ha maga az edukáció megjelenne ebben a dologban, akkor elképzelhető lenne, hogy egy olyan generáció fel tud nőni, amelyik megérti, elfogadja a prevenció jelentőségét, de én erre nem látok kormányzati szándékot, és azt sem látom, hogy a prevenciónak az egyetem vagy, tehát a szakma részéről sem látom azt, hogy komolyan vennék a prevenciót. Nem hiszem, hogy elég mennyiségű fogászati edukáció folyik az általános iskolákban például. [[ESupport->PEducation||Affect]] [[ESupport->Measured||Affect]] [[EClinic->Measured||Affect]] [[ELaw->Measured||Affect]]
+
+I: Törekednél-e annak ellenére a prevenciós szemlélet erősítésére, hogy a magán fogorvosi rendelő pácienseinek bizalmát csökkentheti, ha a fogorvos újabb prevenciós beavatkozásokat javasol? 
+
+C: Igen. Arra gondolom igen, szerintem nagyon sokat jelent az, hogy egy orvos nem pusztán, tehát nem kell, hogy elfogadja a pácienseinek a véleményét. Sokkal inkább jobb, ha véleményformáló szerepe van. Úgyis van olyan páciens, akinek nem felel meg az, hogy egy orvos bizonyos témáról mit gondol. Úgy mondanám, hogy minden zsáknak megvan a maga foltja. Ha ő nem ért azzal a fajta edukációval, vagy azzal a fajta szemlélettel egyet, amit az orvos képviselt, akkor elment volna így is, úgy is előbb-utóbb. És úgy is lesz olyan páciens, aki pedig egyet fog érteni ezzel a szemlélettel. Tehát inkább azt mondanám, hogy csak egy kontraszelektív hatása van a pacientúrára, de valójában nem csökkenti.  
+
+I: Szerinted milyen akadályai lehetnek annak, hogy több digitális technológiát alkalmazzunk?  
+
+C: Hát egyértelmű akadálya szerintem az, hogy a rendelőfinanszírozásba bevont állami támogatások aránytalan elosztása nem teszi lehetővé azt, hogy például egy budapesti Pest megyei rendelő ezekre pályázzon. Ez szerintem mindenképpen gond, hiszen azt gondolom, hogy ennek a technológiának nem pusztán az a szerepe, hogy pénzt lehet vele keresni, vagy nem lehet vele pénzt keresni, hanem van egy olyan szemszög is, amikor azt mondom, hogy a szakmának a fejlődéséhez hozzátartozik az, hogy egy új technológiát milyen gyorsan tud bevezetni. Tehát lehet, hogy valaki, tehát kell olyan szívsebész is, aki a Városmajorban a legmodernebb eszközökhöz ért, és kell olyan szívsebész is, aki [NEM ÉRTHETŐ 13:38] meg tud csinálni egy billentyűműtétet szikével meg érfogóval, de a szikés, érfogós, [NEM ÉRTHETŐ 13:48] embert is ki kell képezni előbb-utóbb a technológiának az izéjére, és hogyha ő abban öregszik meg és abban szocializálódik, akkor nem fog érdeklődni a szakmai újdonságok iránt, tehát összességében véve a szívsebész szakma, hogy ennél a hülye példánál maradjak, szerintem veszít azzal, hogyha ezt a technológiát, nem fektet abba energiát, hogy ezt a technológiát megtanítsa az alacsonyabb képzettségű embereknek. Tehát összességében véve a szakma fejlődését hátráltatja az, hogyha a szakmának bizonyos képviselőit kizárunk ebből a fajta tanulási metódusból. Én így látom, hogy ennek van egy ilyen oldala is, nem pusztán anyagi, még akkor is, hogyha a kormány részéről látom a szándéknak az egyértelmű irányát, és még azt se mondom, hogy nem lehet megérteni, vagy egyetérteni ezzel a szándékkal. De szerintem ezt az oldalát nem vizsgálja és nem szupportálja. 
+[[ESupport->EClinic||Manifest]] [[DSit->DValue||Affect]] [[ELaw->DSit||Affect]] [[EClinic->Measured||Affect]] [[DSit->Measured||Affect]] 
+
+I: Az utolsó kérdés. Törekednél annak ellenére digitális technológiák alkalmazására, hogy ezek kezdetben általában drágábbak hagyományos megoldásoknál, és a fogorvosoknak új készségeket kell elsajátítaniuk használatukhoz? 
+
+C: Ha erre lehet, hogy egyértelmű igennel válaszolni, akkor igen. 

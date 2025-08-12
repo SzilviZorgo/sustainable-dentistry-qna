@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Network Graph</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+        .graph-container {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            background-color: #f8fafc;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1rem;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .controls-panel {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+        .checkbox-label input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container mx-auto p-4 flex flex-col items-center">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Interactive Network Graph</h1>
+
+        <div class="controls-panel w-full max-w-xl mx-auto mb-6">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Filter Edges by Type:</h2>
+            <div class="text-sm text-gray-600 mb-4">
+                <p><strong>Edge Types Found:</strong> %EDGE_TYPES%</p>
+            </div>
+            %FILTER_CONTROLS%
+        </div>
+    </div>
+
+    <div id="graph-container" class="graph-container flex-grow w-full max-w-4xl">
+        %SVG_CONTENT%
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const svgElement = document.getElementById("graph-container").querySelector("svg");
+            if (!svgElement) {
+                console.error("SVG element not found within #graph-container");
+                return;
+            }
+
+            const paths = svgElement.querySelectorAll("path");
+            const polygons = svgElement.querySelectorAll("polygon");
+            const checkboxes = document.querySelectorAll(".controls-panel input[type=\"checkbox\"]");
+
+            function applyFilters() {
+                paths.forEach(path => {
+                    const strokeColor = path.getAttribute("stroke");
+                    const strokeDasharray = path.getAttribute("stroke-dasharray");
+                    let isVisible = false;
+
+                    checkboxes.forEach(checkbox => {
+                        const filterColor = checkbox.dataset.color;
+                        const filterStyle = checkbox.dataset.style;
+                        const isChecked = checkbox.checked;
+
+                        if (isChecked) {
+                            if (filterStyle === "dashed" && strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            } else if (filterStyle === "solid" && !strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            } else if (filterStyle === "dotted" && strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            }
+                        }
+                    });
+                    path.style.display = isVisible ? "initial" : "none";
+                });
+
+                polygons.forEach(polygon => {
+                    const fillColor = polygon.getAttribute("fill");
+                    const strokeColor = polygon.getAttribute("stroke");
+                    let isVisible = false;
+
+                    checkboxes.forEach(checkbox => {
+                        const filterColor = checkbox.dataset.color;
+                        const isChecked = checkbox.checked;
+
+                        if (isChecked && fillColor === filterColor) {
+                            isVisible = true;
+                        }
+                    });
+                    polygon.style.display = isVisible ? "initial" : "none";
+                });
+            }
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener("change", applyFilters);
+            });
+
+            applyFilters();
+            
+            // Add tooltips for truncated node labels
+            const textElements = svgElement.querySelectorAll("text");
+            textElements.forEach(text => {
+                const textContent = text.textContent;
+                if (textContent && textContent.length > 8) {
+                    text.style.cursor = "help";
+                    text.setAttribute("title", textContent);
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

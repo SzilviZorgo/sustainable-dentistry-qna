@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Q&A Network Graphs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        .graph-container {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .graph-container.active {
+            display: block;
+        }
+        .nav-button {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .nav-button.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            font-size: 1.2rem;
+            color: #6b7280;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-right: 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .graph-content {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .controls-panel {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1rem;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+        .checkbox-label input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Sustainability Q&A Network Analysis</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Interactive network graphs showing relationships between sustainability concepts across different cases. 
+                Click on the buttons below to explore individual case networks or view the combined analysis.
+            </p>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Select Network Graph:</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="button-container">
+                <!-- Buttons will be dynamically generated here -->
+            </div>
+        </div>
+
+        <!-- Graph Display Area -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div id="graph-display">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <span>Select a graph to display...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8 text-gray-500">
+            <p>Generated from ROCK analysis data | Interactive network visualization</p>
+        </div>
+    </div>
+
+    <script>
+        // Graph configurations with embedded content
+        const graphConfigs = {
+            'combined': {
+                name: 'Combined Analysis',
+                description: 'All cases combined with frequency analysis',
+                content: null // Will be loaded dynamically
+            },
+            'sample': {
+                name: 'Sample Data',
+                description: 'Sample network for comparison',
+                content: null // Will be loaded dynamically
+            }
+        };
+
+        // Individual case configurations
+        const individualCases = {};
+        for (let i = 1; i <= 16; i++) {
+            const caseId = i.toString();
+            individualCases[`case_${caseId}`] = {
+                name: `Case ${caseId}`,
+                description: 'Individual case analysis',
+                content: null // Will be loaded dynamically
+            };
+        }
+
+        // Combine all graphs
+        const allGraphs = { ...graphConfigs, ...individualCases };
+
+        // Generate navigation buttons
+        function generateButtons() {
+            const container = document.getElementById('button-container');
+            
+            Object.entries(allGraphs).forEach(([id, config]) => {
+                const button = document.createElement('button');
+                button.className = 'nav-button bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium text-sm';
+                button.textContent = config.name;
+                button.setAttribute('data-graph-id', id);
+                
+                button.addEventListener('click', () => loadGraph(id));
+                
+                container.appendChild(button);
+            });
+        }
+
+        // Load and display graph
+        async function loadGraph(graphId) {
+            const display = document.getElementById('graph-display');
+            const config = allGraphs[graphId];
+            
+            if (!config) {
+                display.innerHTML = '<div class="text-center py-12"><div class="text-red-500 text-6xl mb-4">⚠️</div><h3 class="text-xl font-semibold text-gray-800 mb-2">Graph Not Found</h3></div>';
+                return;
+            }
+
+            // Show loading state
+            display.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <span>Loading ${config.name}...</span>
+                </div>
+            `;
+
+            // Update active button
+            document.querySelectorAll('.nav-button').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-graph-id') === graphId) {
+                    btn.classList.add('active');
+                }
+            });
+
+            try {
+                // Load graph content if not already loaded
+                if (!config.content) {
+                    let filePath;
+                    if (graphId === 'combined') {
+                        filePath = 'graphs/network_graph_combined.html';
+                    } else if (graphId === 'sample') {
+                        filePath = 'network_graph_sample.html';
+                    } else {
+                        // Extract case number and create correct filename
+                        const caseNum = graphId.replace('case_', '');
+                        filePath = `graphs/graph_case_case${caseNum}.html`;
+                    }
+                    
+                    console.log(`Loading graph: ${filePath}`);
+                    const response = await fetch(filePath);
+                    if (!response.ok) {
+                        console.error(`Failed to load ${filePath}: ${response.status} ${response.statusText}`);
+                        throw new Error(`Failed to load ${filePath}: ${response.status} ${response.statusText}`);
+                    }
+                    config.content = await response.text();
+                    console.log(`Successfully loaded ${filePath}`);
+                }
+
+                // Extract SVG content from the loaded HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(config.content, 'text/html');
+                const svgElement = doc.querySelector('svg');
+                const controlsPanel = doc.querySelector('.controls-panel');
+
+                if (!svgElement) {
+                    throw new Error('No SVG content found in graph');
+                }
+
+                // Create the display content
+                display.innerHTML = `
+                    ${controlsPanel ? controlsPanel.outerHTML : ''}
+                    <div class="graph-container active">
+                        ${svgElement.outerHTML}
+                    </div>
+                    <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                        <h3 class="font-semibold text-blue-800">${config.name}</h3>
+                        <p class="text-blue-700 text-sm">${config.description}</p>
+                    </div>
+                `;
+
+                // Reinitialize the filter controls
+                initializeFilters();
+
+            } catch (error) {
+                console.error('Error loading graph:', error);
+                display.innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="text-red-500 text-6xl mb-4">⚠️</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Graph Not Found</h3>
+                        <p class="text-gray-600">The graph "${config.name}" could not be loaded.</p>
+                        <p class="text-gray-500 text-sm mt-2">This graph may not have been generated yet.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize filter controls
+        function initializeFilters() {
+            const svgElement = document.querySelector('.graph-container svg');
+            if (!svgElement) return;
+
+            const paths = svgElement.querySelectorAll('path');
+            const polygons = svgElement.querySelectorAll('polygon');
+            const checkboxes = document.querySelectorAll('.controls-panel input[type="checkbox"]');
+
+            function applyFilters() {
+                paths.forEach(path => {
+                    const strokeColor = path.getAttribute('stroke');
+                    const strokeDasharray = path.getAttribute('stroke-dasharray');
+                    let isVisible = false;
+
+                    checkboxes.forEach(checkbox => {
+                        const filterColor = checkbox.dataset.color;
+                        const filterStyle = checkbox.dataset.style;
+                        const isChecked = checkbox.checked;
+
+                        if (isChecked) {
+                            if (filterStyle === 'dashed' && strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            } else if (filterStyle === 'solid' && !strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            } else if (filterStyle === 'dotted' && strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            }
+                        }
+                    });
+                    path.style.display = isVisible ? 'initial' : 'none';
+                });
+
+                polygons.forEach(polygon => {
+                    const fillColor = polygon.getAttribute('fill');
+                    const strokeColor = polygon.getAttribute('stroke');
+                    let isVisible = false;
+
+                    checkboxes.forEach(checkbox => {
+                        const filterColor = checkbox.dataset.color;
+                        const isChecked = checkbox.checked;
+
+                        if (isChecked && fillColor === filterColor) {
+                            isVisible = true;
+                        }
+                    });
+                    polygon.style.display = isVisible ? 'initial' : 'none';
+                });
+            }
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', applyFilters);
+            });
+
+            applyFilters();
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            generateButtons();
+            
+            // Load the combined analysis by default
+            loadGraph('combined');
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const buttons = document.querySelectorAll('.nav-button');
+            const activeButton = document.querySelector('.nav-button.active');
+            const activeIndex = Array.from(buttons).indexOf(activeButton);
+            
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                const nextIndex = (activeIndex + 1) % buttons.length;
+                buttons[nextIndex].click();
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prevIndex = activeIndex <= 0 ? buttons.length - 1 : activeIndex - 1;
+                buttons[prevIndex].click();
+            }
+        });
+    </script>
+</body>
+</html> 

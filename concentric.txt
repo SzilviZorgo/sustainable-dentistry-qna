@@ -1,0 +1,299 @@
+dot_script_template <- '
+digraph ROCK_network {
+    layout="neato";
+    overlap=false;
+    splines="true";
+    sep="+10,10";
+    mindist=1.0;
+    margin="1.0,1.0";
+
+    node [shape=circle, fixedsize=true, width=0.8, fontname="Inter"];
+
+    %s
+
+    edge [dir=forward, fontname="Inter"];
+
+    PEducation -> PMotivation [color="blue", style="dashed", penwidth=5];
+    ACost -> EClinic [color="blue", style="dashed", penwidth=4];
+    EAvailable -> ACost [color="red", style="solid", penwidth=3];
+    EAvailable -> AQuality [color="black", style="solid", arrowhead="none", penwidth=3];
+    ACost -> EAvailable [color="blue", style="dashed", penwidth=2];
+    ACost -> DValue [color="black", style="solid", arrowhead="none", penwidth=2];
+    EClinic -> DValue [color="red", style="solid", penwidth=2];
+    AEfficiency -> ACost [color="black", style="solid", arrowhead="none", penwidth=2];
+    ELaw -> AQuality [color="black", style="solid", arrowhead="none", penwidth=2];
+    AEfficiency -> DValue [color="black", style="solid", arrowhead="none", penwidth=2];
+    DSit -> DValue [color="blue", style="dashed", penwidth=2];
+    ACost -> EOthers [color="blue", style="dashed", penwidth=2];
+    ACost -> PMotivation [color="blue", style="dashed", penwidth=2];
+    EClinic -> AOutdated [color="blue", style="dashed", penwidth=1];
+    AOutdated -> PTrust [color="blue", style="dashed", penwidth=1];
+    EAvailable -> AEfficiency [color="black", style="solid", arrowhead="none", penwidth=1];
+    DValue -> EOthers [color="black", style="solid", arrowhead="none", penwidth=1];
+    ELaw -> ACost [color="blue", style="dashed", penwidth=1];
+    PEducation -> PTrust [color="red", style="solid", penwidth=1];
+    EAvailable -> AOutdated [color="red", style="solid", penwidth=1];
+    EOthers -> PEducation [color="blue", style="dashed", penwidth=1];
+    DValue -> ABenefit [color="black", style="solid", arrowhead="none", penwidth=1];
+    EOthers -> ACost [color="blue", style="dashed", penwidth=1];
+    EClinic -> AEfficiency [color="red", style="solid", penwidth=1];
+    PTrust -> PMotivation [color="blue", style="dashed", penwidth=1];
+    ABenefit -> ACost [color="black", style="solid", arrowhead="none", penwidth=1];
+    DValue -> PMotivation [color="black", style="solid", arrowhead="none", penwidth=1];
+    ESupport -> PEducation [color="blue", style="dashed", penwidth=1];
+    ESupport -> EClinic [color="red", style="solid", penwidth=1];
+    ELaw -> DSit [color="blue", style="dashed", penwidth=1];
+    ESupport -> PMotivation [color="black", style="solid", arrowhead="none", penwidth=1];
+    EOthers -> PMotivation [color="blue", style="dashed", penwidth=1];
+    AEfficiency -> AQuality [color="black", style="solid", arrowhead="none", penwidth=1];
+    ESupport -> ACost [color="black", style="solid", arrowhead="none", penwidth=1];
+    DValue -> AEfficiency [color="black", style="solid", arrowhead="none", penwidth=1];
+    AEfficiency -> EOthers [color="blue", style="dashed", penwidth=1];
+    DValue -> EOthers [color="blue", style="dashed", penwidth=1];
+    EClinic -> DValue [color="blue", style="dashed", penwidth=1];
+    DValue -> DPersonal [color="black", style="solid", arrowhead="none", penwidth=1];
+    AQuality -> DValue [color="blue", style="dashed", penwidth=1];
+    EAvailable -> EClinic [color="red", style="solid", penwidth=1];
+    AEfficiency -> EClinic [color="blue", style="dashed", penwidth=1];
+    EOthers -> ACost [color="red", style="solid", penwidth=1];
+    ERegional -> EClinic [color="blue", style="dashed", penwidth=1];
+    EOthers -> ABenefit [color="black", style="solid", arrowhead="none", penwidth=1];
+    ACost -> PMotivation [color="red", style="solid", penwidth=1];
+    ERegional -> ACost [color="blue", style="dashed", penwidth=1];
+    ERegional -> EOthers [color="red", style="solid", penwidth=1];
+    EClinic -> ACost [color="blue", style="dashed", penwidth=1];
+    DValue -> ACost [color="black", style="solid", arrowhead="none", penwidth=1];
+}
+'
+
+inner_nodes <- c("DValue", "ACost", "PMotivation", "EClinic")
+outer_nodes <- c("PEducation", "EAvailable", "AQuality", "AEfficiency",
+                 "ELaw", "DSit", "EOthers", "AOutdated", "PTrust",
+                 "ABenefit", "ESupport", "ERegional", "DPersonal")
+
+all_defined_nodes <- unique(c(inner_nodes, outer_nodes))
+
+all_nodes_in_edges <- unique(c(
+  "PEducation", "PMotivation", "ACost", "EClinic", "EAvailable", "AQuality", "DValue",
+  "AEfficiency", "ELaw", "DSit", "EOthers", "AOutdated", "PTrust", "ABenefit",
+  "ESupport", "ERegional", "DPersonal"
+))
+
+missing_nodes <- setdiff(all_nodes_in_edges, all_defined_nodes)
+if (length(missing_nodes) > 0) {
+  stop(paste("Error: The following nodes from your edges are not assigned to an inner or outer circle:", paste(missing_nodes, collapse=", ")))
+}
+
+get_circle_positions <- function(node_names, radius, center_x = 0, center_y = 0) {
+  num_nodes <- length(node_names)
+  angles <- seq(0, 2 * pi, length.out = num_nodes + 1)[1:num_nodes]
+  x_coords <- center_x + radius * cos(angles)
+  y_coords <- center_y + radius * sin(angles)
+  
+  node_definitions <- character(num_nodes)
+  for (i in seq_along(node_names)) {
+    node_definitions[i] <- sprintf('%s [pos="%f,%f!"];', node_names[i], x_coords[i], y_coords[i])
+  }
+  return(paste(node_definitions, collapse = "\n"))
+}
+
+inner_radius <- 200
+outer_radius <- 400
+
+inner_node_positions <- get_circle_positions(inner_nodes, inner_radius)
+outer_node_positions <- get_circle_positions(outer_nodes, outer_radius)
+
+all_node_positions <- paste(inner_node_positions, outer_node_positions, sep = "\n")
+
+dot_script_string <- sprintf(dot_script_template, all_node_positions)
+
+input_dot_file <- tempfile(pattern = "ROCK_network_", fileext = ".dot")
+output_svg_file <- tempfile(pattern = "ROCK_network_", fileext = ".svg")
+
+message(paste("Writing DOT script to temporary file:", input_dot_file))
+writeLines(dot_script_string, input_dot_file)
+
+command_executable <- "neato"
+
+args <- c(
+  "-Tsvg",
+  "-o", output_svg_file,
+  input_dot_file
+)
+
+message(paste("Executing Graphviz command:", command_executable, paste(args, collapse=" ")))
+result <- system2(command_executable, args, stdout = TRUE, stderr = TRUE)
+
+if (!is.null(attr(result, "status")) && attr(result, "status") != 0) {
+  warning("Graphviz command failed. Please check Graphviz installation and PATH, and the DOT syntax.")
+  message("Graphviz Error Output (stderr/stdout):")
+  print(result)
+  stop("Graph rendering failed.")
+} else {
+  message(paste("SVG graph successfully generated to temporary file:", output_svg_file))
+  
+  svg_content <- readLines(output_svg_file)
+  svg_content_string <- paste(svg_content, collapse = "\n")
+  
+  html_template <- '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Network Graph</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+        .graph-container {
+            flex-grow: 1;
+            width: 100%%; /* Escaped for sprintf */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            background-color: #f8fafc;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1rem;
+        }
+        svg {
+            max-width: 100%%; /* Escaped for sprintf */
+            height: auto;
+            display: block;
+        }
+        .controls-panel {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+        .checkbox-label input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container mx-auto p-4 flex flex-col items-center">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Interactive Network Graph</h1>
+
+        <div class="controls-panel w-full max-w-xl mx-auto mb-6">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Filter Edges by Type:</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="filter-blue-dashed" data-color="blue" data-style="dashed" checked>
+                    <span class="text-blue-600 font-medium">Blue Dashed</span>
+                    <svg width="40" height="2" class="ml-2"><line x1="0" y1="1" x2="40" y2="1" stroke="blue" stroke-width="2" stroke-dasharray="5,5"/></svg>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="filter-red-solid" data-color="red" data-style="solid" checked>
+                    <span class="text-red-600 font-medium">Red Solid</span>
+                    <svg width="40" height="2" class="ml-2"><line x1="0" y1="1" x2="40" y2="1" stroke="red" stroke-width="2"/></svg>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="filter-black-solid" data-color="black" data-style="solid" checked>
+                    <span class="text-gray-800 font-medium">Black Solid</span>
+                    <svg width="40" height="2" class="ml-2"><line x1="0" y1="1" x2="40" y2="1" stroke="black" stroke-width="2"/></svg>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="graph-container" class="graph-container flex-grow w-full max-w-4xl">
+        %s
+    </div>
+
+    <script>
+        document.addEventListener(\'DOMContentLoaded\', function() {
+            const svgElement = document.getElementById(\'graph-container\').querySelector(\'svg\');
+            if (!svgElement) {
+                console.error(\'SVG element not found within #graph-container\');
+                return;
+            }
+
+            const paths = svgElement.querySelectorAll(\'path\');
+            const polygons = svgElement.querySelectorAll(\'polygon\');
+            const checkboxes = document.querySelectorAll(\'.controls-panel input[type="checkbox"]\');
+
+            function applyFilters() {
+                paths.forEach(path => {
+                    const strokeColor = path.getAttribute(\'stroke\');
+                    const strokeDasharray = path.getAttribute(\'stroke-dasharray\');
+                    let isVisible = false;
+
+                    checkboxes.forEach(checkbox => {
+                        const filterColor = checkbox.dataset.color;
+                        const filterStyle = checkbox.dataset.style;
+                        const isChecked = checkbox.checked;
+
+                        if (isChecked) {
+                            if (filterStyle === \'dashed\' && strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            } else if (filterStyle === \'solid\' && !strokeDasharray && strokeColor === filterColor) {
+                                isVisible = true;
+                            }
+                        }
+                    });
+                    path.style.display = isVisible ? \'initial\' : \'none\';
+                });
+
+                polygons.forEach(polygon => {
+                    const fillColor = polygon.getAttribute(\'fill\');
+                    const strokeColor = polygon.getAttribute(\'stroke\');
+                    let isVisible = false;
+
+                    checkboxes.forEach(checkbox => {
+                        const filterColor = checkbox.dataset.color;
+                        const isChecked = checkbox.checked;
+
+                        if (isChecked && fillColor === filterColor) {
+                            isVisible = true;
+                        }
+                    });
+                    polygon.style.display = isVisible ? \'initial\' : \'none\';
+                });
+            }
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener(\'change\', applyFilters);
+            });
+
+            applyFilters();
+        });
+    </script>
+</body>
+</html>
+'
+  html_output_string <- sprintf(html_template, svg_content_string)
+  cat(html_output_string)
+}
+
+{
+html_output_string <- sprintf(html_template, svg_content_string)
+
+# Define the path for your output HTML file
+output_html_file <- "network_graph.html" # You can specify any path and filename here
+
+# Save the HTML content to the specified file
+writeLines(html_output_string, output_html_file)
+
+message(paste("Interactive HTML graph saved to:", normalizePath(output_html_file)))
+
+# Optional: If you still want to see it in the console, keep this line
+# cat(html_output_string)
+}

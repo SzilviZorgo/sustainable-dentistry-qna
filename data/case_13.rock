@@ -1,0 +1,47 @@
+[[cid=case13]]  
+
+I: Szuper. Hogyan tudnád csökkenteni szerinted a munkád környezeti terhelését, és hajlandó lennél-e ennek érdekében változtatásokat alkalmazni? 
+
+C: Hát igyekszem figyelni arra, hogy nem minden mozdulattal új kesztyűt veszek, ami szerintem még egy érdekes megoldás lehet, hogy a műanyag poharakat esetleg papírra cseréljük, hátha ezzel egy picikét kevesebb ennek a terhelése. Nyilván ahhoz olyan papírpohár kell, ami nem ázik el fél perc alatt, de persze ennyi nyitott lennék hogyha. [[EAvailable->Measured||Affect]]
+
+ I: A meglátásod szerint mennyire használod ki azokat a lehetőségeket, amelyekkel csökkentheted az eszközök és tárgyak eldobását egy-egy kezelés után? 
+
+C: Amennyire lehet, én ezeket igyekszem kihasználni. Nyilván azért nálunk a kisebb méretű boxok miatt relatíve limitált, hogy mit, hova, hogyan tudok letenni, úgyhogy még sajnos előfordul az, hogy meg kell nyitni olyan dolgot is, amit mondjuk nem biztos, hogy összefogdosnék, hogyha egy picit több helyem lenne. [[EClinic->NotMeasured||Affect]]
+
+I: Világos. Szerinted milyen akadályai lehetnek annak, hogy kevesebb eszközt és tárgyat dobjunk el egy-egy kezelés után? 
+
+C: Hát. 
+
+I: Fogós kérdés. 
+
+C: Igen. Lehet ha magam fizetném, akkor azért jobban odafigyelnék rá. Egyébként szerintem, hogyha kevesebbet kellene ki-be szaladgálnom a kezelő rész, meg az eszközöknek a lerakati helye között, tehát nem kéne minden egyes eszközért, új fúróért, stb ledobom a kesztyűt, előveszem, újat veszek, stb, akkor azért az jobb lenne. Tehát egy picit az eszközöknek az elosztása is egy picit lehetne szerintem máshogy, hogy ne kelljen akkora utakat bejárnom, hogy azért már tényleg ledobom a kesztyűt, hogy ne fogjak össze semmit útközben. [[DValue->Measured||Affect]] [[EClinic->DValue||Affect]] [[EClinic->Measured||Affect]]
+
+
+I: Rendben. Törekedni rá annak ellenére tárgyak újbóli fogászati felhasználására, hogy ez infekciókontroll szempontból kevésbé praktikus? 
+
+C: Az infekciókontrollból ilyen szempontból nem engednék. Tehát hogyha ez ennek a rovására menne, azt én nem engedném. Ez fontos. [[AQuality->Measured||Affect]]
+
+I: Szerinted milyen akadályai lehetnek annak, hogy erősítsük a prevenciós szemléletet? 
+
+C: Hát egyrészt a betegnek a motivációja, mert ugye sokan csak bejönnek, hogy ő egy szép mosolyt akar és fizetni. [[PMotivation->Measured||Affect]]
+
+I: Igen. 
+
+C: Azért, hogy ezért neki mit kell tenni, az ugye az egyéni motiváltság kérdése. A másik meg, hogy nyilván vannak olyan prevenciós eszközök, amik egyrészt van, hogy a rendelő számára is drágák, hogy bemutassuk, másrészt meg lehet, hogy a páciens számára egyénre szabottan ideális lenne, de mondjuk az ő pénztárcája meg nem engedheti meg ezt, úgyhogy ezt kellene valahogy picikét közelíteni egymáshoz. 
+[[ACost->EClinic||Affect]] [[ACost->PMotivation||Affect]]
+
+I: Világos. Törekednél-e annak ellenére a prevenciós szemlélet erősödésére, hogy - hát magán fogorvosi rendelők esetében legalábbis biztosan - páciensek bizalmát csökkentheti, ha a fogorvos újabb prevenciós beavatkozásokat javasol? 
+
+C: Én azt gondolom, hogy mivel az a beteg érdekeit szolgálja, ha nem is sikerül neki 100%-ban átadnom, én maximálisan szakmaian járok el, úgyhogy én mindenképpen ennek ellenére is a prevenciót hangsúlyoznám neki és csinálnám a beavatkozásokat, hogyha ezt nem tudja elfogadni, akkor vagy én nem mondtam el jól, vagy nem áll készen arra, vagy nem érti teljes egészében, hogy ez az egész szájhigiénia mit jelent. 
+
+I: Szuper. Meglátásod szerint milyen akadályai lehetnek annak, hogy több digitális technológiát használjunk? 
+
+C: Egyrészt az, hogy ugye minden rendszer különbözik, ha valaki az egyiket megtanulta és az adott esetben nem elérhető, akkor nyilván a másik rendszerre átállni az némiképp nehezebb. Minden szoftver más, azoknak a kezelését meg kell tanulni, minden eszköz más, azt is meg kell tanulni. A harmadik meg, hogy ez egy dolog, hogy mi levesszük a lenyomatot, de hát abban valahogy produktumnak is kell születnie, és abban egyetértek azért sok esetben a kollégákkal, hogy olyan anyagokkal és eszközökkel dolgozunk egy 3d nyomtatás folyamán, amik azért nagyon erős vegyszerek, nem biztos, hogy annak mindenki szívesen kiteszi magát, vagy nem biztos, hogy mindenki megfelelőnek érzi a saját edukációs szintjét ahhoz, hogy tudja, hogy ezeket az anyagokat hogyan kell kezelni. [[DValue->DPersonal||Analogue]] [[AQuality->DValue||Affect]] [[AQuality->NotMeasured||Affect]]
+
+I: Utolsó kérdés. Törekedni rá annak ellenére a digitális technológiák alkalmazására, hogy ezek kezdetben általában drágábbak a hagyományos megoldásoknál, és a fogorvosoknak új készségeket kell elsajátítaniuk a használatukhoz? 
+
+C: Én úgy gondolom, hogy a fogászat az egy folyamatosan fejlődő szakma, tehát az új készség elsajátítása az szinte része a pályánknak. 
+
+I: Na igen. 
+
+C: Hogy ez drágább, igen, ez az első befektetés drágább, de én azt gondolom, hogy ez hosszú távon megtérül. Tehát ha megnézem, hogy mondjuk egyszeri befektetésnél milyen költsége van egy nyomtatónak, aztán hogy hosszú távon ebből mennyit lehet profitálni, szerintem megtérül. 
