@@ -306,8 +306,18 @@ digraph ROCK_network {
   svg_file <- tempfile(fileext = ".svg")
   system2(layout_engine, c("-Tsvg", "-o", svg_file, dot_file), stdout = TRUE, stderr = TRUE)
   
-  # Read SVG content
-  svg_content <- paste(readLines(svg_file), collapse = "\n")
+  # Read SVG content and extract only the SVG element
+  svg_lines <- readLines(svg_file)
+  svg_start <- which(grepl("^<svg", svg_lines))
+  svg_end <- which(grepl("</svg>$", svg_lines))
+  
+  if (length(svg_start) > 0 && length(svg_end) > 0) {
+    # Extract only the SVG element content (from <svg> to </svg>)
+    svg_content <- paste(svg_lines[svg_start:svg_end], collapse = "\n")
+  } else {
+    # Fallback: use the entire content but this shouldn't happen with proper SVG files
+    svg_content <- paste(svg_lines, collapse = "\n")
+  }
   
   # Generate filter controls
   filter_controls <- ""
