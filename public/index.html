@@ -12,11 +12,13 @@
         }
         .graph-container {
             width: 100%;
-            height: 80vh;
+            min-height: 80vh;
+            height: auto;
             border: none;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             display: none;
+            overflow: auto;
         }
         .graph-container.active {
             display: block;
@@ -36,7 +38,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80vh;
+            min-height: 80vh;
+            height: auto;
             font-size: 1.2rem;
             color: #6b7280;
         }
@@ -109,7 +112,7 @@
 
         <!-- Footer -->
         <div class="text-center mt-8 text-gray-500">
-            <p>Generated from ROCK analysis data | Interactive network visualization</p>
+            <!-- Footer removed -->
         </div>
     </div>
 
